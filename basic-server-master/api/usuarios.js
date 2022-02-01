@@ -19,8 +19,8 @@ inserirRota("/criar_usuario", (dados, resposta) => {
     return resposta({ erro: "É necessário preencher a idade" });
   }
 
-  database(`INSERT INTO USUARIO (nome, sobrenome, idade)
-                VALUES (´${dados.nome}´, ´${dados.sobrenome}´ , ´${dados.idade})`)
+  database(`INSERT INTO USUARIOS (NOME, SOBRENOME, IDADE)
+                VALUES ("${dados.nome}", "${dados.sobrenome}" , ${dados.idade})`,)
     .then((result) => {
       console.log("USUARIO INSERIDO COM SUCESSO"),
         resposta({ message: "Usuario inserido com sucesso!" });
