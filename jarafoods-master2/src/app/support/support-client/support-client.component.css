@@ -1,0 +1,63 @@
+.ajuda-text{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 5%;
+  margin-right: 40%;
+}
+
+.ajuda-textmain{
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 20px ;
+  margin-right: 45%;
+}
+
+.ajuda-textchild{
+  font-weight: lighter;
+  margin-top: -1%;
+ font-size: 40px;
+ color: rgb(136, 136, 136);
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.img-suport{
+  width: 400px;
+}
+
+.flexbox-img{
+  display: flex;
+  justify-content:space-around;
+  margin-top: 10%;
+  align-items: center;
+}
+
+.flexbox-text{
+  font-size: 22px;
+  color: rgb(73, 73, 73);
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.signin-button{
+  width: 120px;
+  height: 60px;
+  border-radius: 10px;
+  background-color: red;
+  border: none;
+  color: white;
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.signin-button:hover{
+  background-color: rgb(180, 0, 0);
+  transition: .4s;
+}
+
+.form-suport{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
