@@ -1,3 +1,4 @@
+import { ThankspageComponent } from './support/thankspage/thankspage.component';
 import { UserLoginComponent } from './homepage/user-login/user-login.component';
 import { CadastroUserComponent } from './homepage/cadastro-user/cadastro-user.component';
 import { LoginComponent } from "./homepage/login/login.component";
@@ -25,6 +26,7 @@ const routes: Routes = [
   { path: "suporte", component: SupportClientComponent },
   {path: "registrousuario", component: CadastroUserComponent},
   {path: "loginuser", component: UserLoginComponent},
+  {path: "thankspage", component: ThankspageComponent}
 
 ];
 
