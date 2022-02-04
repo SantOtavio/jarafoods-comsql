@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Route, Router } from "@angular/router";
 
 @Component({
   selector: 'app-support-client',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SupportClientComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
+  }
+
+  redirectSignin(){
+    this.router.navigate(["/loginuser"])
+  }
+
+  thankspage(){
+    this.router.navigate(["/thankspage"])
   }
 
 }

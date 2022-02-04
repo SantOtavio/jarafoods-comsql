@@ -1,4 +1,4 @@
-.ajuda-text{
+.ajuda-text {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -7,38 +7,41 @@
   margin-right: 40%;
 }
 
-.ajuda-textmain{
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  font-size: 20px ;
+.ajuda-textmain {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 20px;
   margin-right: 45%;
 }
 
-.ajuda-textchild{
+.ajuda-textchild {
   font-weight: lighter;
-  margin-top: -1%;
- font-size: 40px;
- color: rgb(136, 136, 136);
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  margin-top: 0;
+  font-size: 40px;
+  color: rgb(136, 136, 136);
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
 
-.img-suport{
+.img-suport {
   width: 400px;
 }
 
-.flexbox-img{
+.flexbox-img {
   display: flex;
-  justify-content:space-around;
-  margin-top: 10%;
+  justify-content: space-around;
+  margin-top: 15%;
   align-items: center;
 }
 
-.flexbox-text{
+.flexbox-text {
   font-size: 22px;
   color: rgb(73, 73, 73);
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
 
-.signin-button{
+.signin-button {
   width: 120px;
   height: 60px;
   border-radius: 10px;
@@ -50,14 +53,104 @@
   cursor: pointer;
 }
 
-.signin-button:hover{
+.signin-button:hover {
   background-color: rgb(180, 0, 0);
-  transition: .4s;
+  transition: 0.4s;
 }
 
-.form-suport{
+.form-suport {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.form-main {
+  margin-top: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 350px;
+  min-height: 350px;
+  border: solid 1px black;
+  border-radius: 30px;
+  row-gap: 15px;
+}
+
+.mensagem {
+  width: 250px;
+  border-radius: 15px;
+  font-size: 15px;
+  padding: 10px 10px;
+  transition-property: box-shadow, transform;
+  transition-duration: 350ms;
+  transition-timing-function: ease;
+  border: solid 1px black;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.24);
+}
+
+.mensagem:hover {
+  box-shadow: 0px 8px 10px 1px rgba(0, 0, 0, 0.2);
+  transform: translateY(-8px);
+}
+
+.email {
+  width: 250px;
+  border-radius: 15px;
+  font-size: 15px;
+  padding: 10px 10px;
+  outline: none;
+  border: solid 1px black;
+  transition-property: box-shadow, transform;
+  transition-duration: 350ms;
+  transition-timing-function: ease;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.24);
+}
+
+.email:hover {
+  box-shadow: 0px 8px 10px 1px rgba(0, 0, 0, 0.2);
+  transform: translateY(-8px);
+}
+
+.btn-forms {
+  border-radius: 15px;
+  font-size: 15px;
+  padding: 10px 10px;
+  outline: none;
+  border: none;
+  width: 100px;
+  background: red;
+  transition-property: box-shadow, transform;
+  transition-duration: 350ms;
+  transition-timing-function: ease;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.24);
+  cursor: pointer;
+  font-weight: 700;
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(255, 0, 0, 1) 0%,
+    rgba(255, 184, 0, 1) 100%,
+    rgba(255, 218, 0, 1) 100%
+  );
+}
+
+.btn-forms:hover {
+  box-shadow: 0px 8px 10px 1px rgba(0, 0, 0, 0.2);
+  transform: translateY(-8px);
+}
+
+.header{
+  box-shadow: 0px 8px 10px 1px rgba(0, 0, 0, 0.2);
+  width: 100%;
+}
+
+.icon{
+width: 340px;
+}
+
+*{
+  margin: 0 0 0 0;
+  padding: 0 0 0 0 ;
 }

@@ -1,13 +1,24 @@
+<div class="header">
+  <img class="icon" src="../../../../simple-logo-jarafoods.png">
+</div>
+
 <div class="ajuda-text">
   <h1 class="ajuda-textmain">Ajuda</h1>
   <h3 class="ajuda-textchild">Como podemos ajudar?</h3>
 </div>
 
+<div class="form-suport">
+  <div class="form-main">
+    <input placeholder="Insira seu email" type="email" class="email" />
+    <textarea class="mensagem" name="subject" placeholder="Escreva seu problema aqui!" style="height:200px"></textarea>
+    <button class="btn-forms" (click)="thankspage()">Enviar</button>
+  </div>
+</div>
+
 <div class="flexbox-img">
+  <h3 class="flexbox-text">Vamos matar sua fome! Faça seu login!</h3>
 
-<h3 class="flexbox-text">Vamos matar sua fome! Faça seu login!</h3>
-
-<button class="signin-button" (click)="redirectSignin()">Entrar</button>
+  <button class="signin-button" (click)="redirectSignin()">Entrar</button>
 
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -107,10 +118,4 @@
   </svg>
 </div>
 
-<br>
-
-<div class="form-suport">
-  <input placeholder="Insira seu email" type="email" class="email">
-  <input placeholder="Digite aqui seu problema" type="text" class="message">
-  <button class="btn-forms">Enviar</button>
-</div>
+<br />
