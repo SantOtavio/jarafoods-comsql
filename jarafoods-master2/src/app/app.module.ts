@@ -1,6 +1,6 @@
-import { ThankspageComponent } from './support/thankspage/thankspage.component';
-import { UserLoginComponent } from './homepage/user-login/user-login.component';
-import { CadastroUserComponent } from './homepage/cadastro-user/cadastro-user.component';
+import { ThankspageComponent } from "./support/thankspage/thankspage.component";
+import { UserLoginComponent } from "./homepage/user-login/user-login.component";
+import { CadastroUserComponent } from "./homepage/cadastro-user/cadastro-user.component";
 import { LoginComponent } from "./homepage/login/login.component";
 import { HomepageModule } from "./homepage/homepage.module";
 import { BrowserModule } from "@angular/platform-browser";
@@ -18,17 +18,34 @@ import { EntregadorSignupComponent } from "./entregador/entregador-signup/entreg
 import { SupportClientComponent } from "./support/support-client/support-client.component";
 import { SupportModule } from "./support/support.module";
 
+import {
+  SocialLoginModule,
+  AuthServiceConfig,
+  GoogleLoginProvider,
+} from "angular-6-social-login-v2";
+
 const routes: Routes = [
   { path: "", component: LoginComponent },
   { path: "*", redirectTo: "" },
   { path: "restcadastro", component: CadastrorestauranteComponent },
   { path: "entregadorcadastro", component: EntregadorSignupComponent },
   { path: "suporte", component: SupportClientComponent },
-  {path: "registrousuario", component: CadastroUserComponent},
-  {path: "loginuser", component: UserLoginComponent},
-  {path: "thankspage", component: ThankspageComponent}
-
+  { path: "registrousuario", component: CadastroUserComponent },
+  { path: "loginuser", component: UserLoginComponent },
+  { path: "thankspage", component: ThankspageComponent },
 ];
+
+export function getAuthServiceConfigs() {
+  let config = new AuthServiceConfig([
+    {
+      id: GoogleLoginProvider.PROVIDER_ID,
+      provider: new GoogleLoginProvider(
+        "951388737757-mlmid6c88d1vf7s002q9itjsugeg65ra.apps.googleusercontent.com"
+      )
+    },
+  ]);
+  return config;
+}
 
 @NgModule({
   declarations: [AppComponent],
@@ -38,9 +55,15 @@ const routes: Routes = [
     RestcadastroModule,
     EntregadorModule,
     SupportModule,
+    SocialLoginModule,
     RouterModule.forRoot(routes),
   ],
-  providers: [],
+  providers: [
+    {
+      provide: AuthServiceConfig,
+      useFactory: getAuthServiceConfigs
+    },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
