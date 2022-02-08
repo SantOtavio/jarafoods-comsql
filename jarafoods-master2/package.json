@@ -1,9 +1,10 @@
 {
   "name": "jarafoods",
   "version": "0.0.0",
+  "proxy": "http://localhost:3000",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --o",
+    "start": "ng serve --o --proxy-config proxy.conf.json",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",

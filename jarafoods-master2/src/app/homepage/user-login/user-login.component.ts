@@ -1,5 +1,6 @@
 import { Component, ElementRef, OnInit } from "@angular/core";
 import { AuthService, GoogleLoginProvider } from "angular-6-social-login-v2";
+import { UsuarioService } from "../../services/usuario.service";
 
 @Component({
   selector: "app-user-login",
@@ -9,7 +10,8 @@ import { AuthService, GoogleLoginProvider } from "angular-6-social-login-v2";
 export class UserLoginComponent implements OnInit {
   constructor(
     private elementRef: ElementRef,
-    private socialAuthService: AuthService
+    private socialAuthService: AuthService,
+    private usuarioService: UsuarioService,
   ) {}
 
   ngAfterViewInit() {
@@ -27,5 +29,12 @@ export class UserLoginComponent implements OnInit {
       });
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.usuarioService.buscarUsuarios().then(resultado => {
+      console.log('RESULT', resultado);
+    }).catch(erro => {
+      console.log('ERRO AO BUSCAR USUARIO', erro)
+    })
+
+  }
 }
