@@ -6,22 +6,34 @@
   background: #2D2F36;
 }
 ::-moz-selection {
-  background: #2D2F36;
+  background: #0037ff;
 }
+
+/*
+html {
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   background: white;
   font-family: 'Inter UI', sans-serif;
   margin: 0;
-  padding: 20px;
-}
+  height: 100vh;
+  width: 100vw;
+  padding: 0;
+  box-sizing: border-box;
+} */
 .page {
-  background: #e2e2e5;
   display: flex;
   flex-direction: column;
-  height: calc(100% - 40px);
-  position: absolute;
+  height: 100vh;
   place-content: center;
-  width: calc(100% - 40px);
+  width: 100vw;
+  background-color: red;
 }
 @media (max-width: 767px) {
   .page {

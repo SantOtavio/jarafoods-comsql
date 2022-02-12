@@ -15,8 +15,7 @@ export class UserLoginComponent implements OnInit {
   ) {}
 
   ngAfterViewInit() {
-    this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor =
-      "#e2e2e5";
+
   }
 
   public socialSignIn() {
