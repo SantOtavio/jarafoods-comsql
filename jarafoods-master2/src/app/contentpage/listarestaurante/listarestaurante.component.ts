@@ -11,4 +11,9 @@ export class ListarestauranteComponent implements OnInit {
 
   ngOnInit() {
   }
+
+  logout(){
+    localStorage.removeItem('USER');
+    this.router.navigate(["/"]);
+  }
 }
