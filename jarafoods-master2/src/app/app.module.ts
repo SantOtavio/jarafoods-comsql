@@ -18,11 +18,17 @@ import { EntregadorSignupComponent } from "./entregador/entregador-signup/entreg
 import { SupportClientComponent } from "./support/support-client/support-client.component";
 import { SupportModule } from "./support/support.module";
 
+import { ContentpageModule } from "./contentpage/contentpage.module";
+import { ListarestauranteComponent } from "./contentpage/listarestaurante/listarestaurante.component";
+
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+
 import {
   SocialLoginModule,
   AuthServiceConfig,
   GoogleLoginProvider,
 } from "angular-6-social-login-v2";
+import CheckLogged from "./checkLogged.canActivate";
 
 const routes: Routes = [
   { path: "", component: LoginComponent },
@@ -33,6 +39,7 @@ const routes: Routes = [
   { path: "registrousuario", component: CadastroUserComponent },
   { path: "loginuser", component: UserLoginComponent },
   { path: "thankspage", component: ThankspageComponent },
+  { path: "listrestaurante", canActivate: [CheckLogged] , component:  ListarestauranteComponent  },
 ];
 
 export function getAuthServiceConfigs() {
@@ -41,7 +48,7 @@ export function getAuthServiceConfigs() {
       id: GoogleLoginProvider.PROVIDER_ID,
       provider: new GoogleLoginProvider(
         "951388737757-mlmid6c88d1vf7s002q9itjsugeg65ra.apps.googleusercontent.com"
-      )
+      ),
     },
   ]);
   return config;
@@ -57,12 +64,16 @@ export function getAuthServiceConfigs() {
     SupportModule,
     SocialLoginModule,
     RouterModule.forRoot(routes),
+    FormsModule,
+    ReactiveFormsModule,
+    ContentpageModule,
   ],
   providers: [
     {
       provide: AuthServiceConfig,
-      useFactory: getAuthServiceConfigs
+      useFactory: getAuthServiceConfigs,
     },
+    CheckLogged
   ],
   bootstrap: [AppComponent],
 })

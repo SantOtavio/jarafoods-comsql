@@ -1,197 +1,147 @@
-@import url('https://rsms.me/inter/inter-ui.css');
-::selection {
-  background: #2D2F36;
-}
-::-webkit-selection {
-  background: #2D2F36;
-}
-::-moz-selection {
-  background: #0037ff;
-}
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap");
 
-/*
-html {
-  margin: 0;
+.container {
   height: 100vh;
   width: 100vw;
-  padding: 0;
-  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-body {
-  background: white;
-  font-family: 'Inter UI', sans-serif;
-  margin: 0;
-  height: 100vh;
-  width: 100vw;
-  padding: 0;
-  box-sizing: border-box;
-} */
-.page {
+.inputscontainer {
   display: flex;
   flex-direction: column;
-  height: 100vh;
-  place-content: center;
-  width: 100vw;
-  background-color: rgb(236, 236, 236);
-}
-@media (max-width: 767px) {
-  .page {
-    height: auto;
-    margin-bottom: 20px;
-    padding-bottom: 20px;
-  }
-}
-.container {
-  display: flex;
-  height: 320px;
-  margin: 0 auto;
-  width: 640px;
-}
-@media (max-width: 767px) {
-  .container {
-    flex-direction: column;
-    height: 630px;
-    width: 320px;
-  }
-}
-.left {
-  background: white;
-  height: calc(100% - 40px);
-  top: 20px;
-  position: relative;
-  width: 50%;
-  display: flex;
+  row-gap: 30px;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
-  row-gap: 20px;
-  font-size: larger;
-  font-family: Arial, Helvetica, sans-serif;
-  box-shadow: 0px 0px 40px 16px rgba(0,0,0,0.22);
-}
-@media (max-width: 767px) {
-  .left {
-    height: 100%;
-    left: 20px;
-    width: calc(100% - 40px);
-    max-height: 270px;
-    
-  }
-}
-
-.eula {
-  color: #999;
-  font-size: 14px;
-  line-height: 1.5;
-  margin: 40px;
-}
-.right {
-  background: #EA1D2C;
-  box-shadow: 0px 0px 40px 16px rgba(0,0,0,0.22);
-  color: #F1F1F2;
-  position: relative;
-  width: 50%;
-}
-@media (max-width: 767px) {
-  .right {
-    flex-shrink: 0;
-    height: 100%;
-    width: 100%;
-    max-height: 350px;
-  }
-}
-svg {
-  position: absolute;
-  width: 320px;
-}
-path {
-  fill: none;
-  stroke: white;;
-  stroke-width: 4;
-  stroke-dasharray: 240 1386;
-}
-.form {
-  margin: 40px;
-  position: absolute;
-}
-label {
-  color:  #ffffff;
-  display: block;
-  font-size: 14px;
-  height: 16px;
-  margin-top: 20px;
-  margin-bottom: 5px;
-  font-family: 'Courier New', Courier, monospace;
-
-}
-input {
-  background-color: #be141f;
-  transition-property: box-shadow, transform;
-  transition-duration: 350ms;
-  transition-timing-function: ease;
-  border: solid 1px black;
-  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.24);
-  border: 0;
-  color: #f2f2f2;
-  font-size: 20px;
-  height: 30px;
-  line-height: 30px;
-  outline: none !important;
   width: 100%;
-}
-input::-moz-focus-inner {
-  border: 0;
-}
-
-input:hover{
-  box-shadow: 0px 8px 10px 1px rgba(0, 0, 0, 0.2);
-  transform: translateY(-6px);
+  height: 100%;
+  margin-bottom: 10%;
 }
 
-.google-login{
-  transition: color 300ms;
-  transition-property: box-shadow, transform;
-  transition-duration: 350ms;
-  transition-timing-function: ease;
+.signupcontainer {
   display: flex;
-  width: 100px;
-  box-shadow: 1px 2px 4px 1px rgba(0, 0, 0, 0.24);
+  flex-direction: column;
+  row-gap: 30px;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  height: 80%;
+  border-top: 5px solid red;
+  left: 0;
+  top: 0;
+  box-shadow: 0px 0px 40px 16px rgba(0, 0, 0, 0.22);
 }
 
-.google-login:hover{
-  box-shadow: 0px 8px 10px 1px rgba(0, 0, 0, 0.2);
-  transform: translateY(-8px);
+.name-signup {
+  min-width: 60%;
+  min-height: 10%;
+  width: 60%;
+  height: 10%;
+  border-radius: 10px;
+  border: none;
+  border: 1px solid black;
 }
 
-
-
-#submit {
-  color: #ffffff;
-  margin-top: 40px;
-  transition: color 300ms;
-  transition-property: box-shadow, transform;
-  transition-duration: 350ms;
-  transition-timing-function: ease;
-  box-shadow: 1px 2px 4px 1px rgba(0, 0, 0, 0.24);
-  border-radius: 15px;
-  height: 60px;
-  background: linear-gradient(
-    90deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(255, 0, 0, 1) 0%,
-    rgba(255, 184, 0, 1) 100%,
-    rgba(255, 218, 0, 1) 100%
-  );
-}
-#submit:focus {
-  color: #f2f2f2;
-}
-#submit:active {
-  color: #d0d0d2;
+.name-signup:hover {
+  transition: 0.4s;
+  border-color: rgb(206, 55, 55);
 }
 
-#submit:hover{
-  box-shadow: 0px 8px 10px 1px rgba(0, 0, 0, 0.2);
-  transform: translateY(-8px);
+.email-signup {
+  min-width: 60%;
+  min-height: 10%;
+  width: 60%;
+  height: 10%;
+  border-radius: 10px;
+  border: 1px solid black;
+}
+
+.email-signup:hover {
+  transition: 0.4s;
+  border-color: rgb(206, 55, 55);
+}
+
+.senha-signup {
+  min-width: 60%;
+  min-height: 10%;
+  width: 60%;
+  height: 10%;
+  border-radius: 10px;
+  border: 1px solid black;
+}
+
+.senha-signup:hover {
+  transition: 0.4s;
+  border-color: rgb(206, 55, 55);
+}
+
+.wasborn-signup {
+  width: 60%;
+  height: 10%;
+  min-width: 60%;
+  min-height: 10%;
+  border-radius: 10px;
+  border: 1px solid black;
+}
+
+.wasborn-signup:hover {
+  transition: 0.4s;
+  border-color: rgb(206, 55, 55);
+}
+
+.register {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  margin-bottom: -10px;
+}
+
+.register:hover {
+  transition: 0.4s;
+  border-color: rgb(206, 55, 55);
+}
+
+.googleregister {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 15px;
+  width: 60%;
+  height: 10%;
+  min-width: 60%;
+  min-height: 10%;
+  border-radius: 10px;
+  border-color: 1px black;
+  background-color: rgb(255, 255, 255);
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.googleregister:hover {
+  transition: 0.4s;
+  border-color: rgb(206, 55, 55);
+}
+
+.loginconfirm{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 15px;
+  width: 60%;
+  height: 10%;
+  min-width: 60%;
+  min-height: 10%;
+  border-radius: 10px;
+  border-color: 1px black;
+  background-color: rgb(255, 255, 255);
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.loginconfirm:hover{
+  transition: 0.4s;
+  border-color: rgb(12, 240, 23);
 }

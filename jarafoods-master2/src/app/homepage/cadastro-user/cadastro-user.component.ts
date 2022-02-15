@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { AuthService, GoogleLoginProvider } from "angular-6-social-login-v2";
+import { UsuarioService } from "../../services/usuario.service";
 
 @Component({
   selector: "app-cadastro-user",
@@ -7,9 +8,16 @@ import { AuthService, GoogleLoginProvider } from "angular-6-social-login-v2";
   styleUrls: ["./cadastro-user.component.css"],
 })
 export class CadastroUserComponent implements OnInit {
-  constructor(private socialAuthService: AuthService) {}
+  constructor(
+    private socialAuthService: AuthService,
+    private usuarioService: UsuarioService
+  ) {}
 
   ngOnInit() {}
+
+  nome = "";
+  password = "";
+  email = "";
 
   public socialSignIn() {
     GoogleLoginProvider.PROVIDER_ID;
@@ -21,7 +29,7 @@ export class CadastroUserComponent implements OnInit {
       });
   }
 
-  registerconfirm(){
-    
+  registerconfirm() {
+    this.usuarioService.cadastrarUsuarios(this.nome , this.password , this.email);
   }
 }

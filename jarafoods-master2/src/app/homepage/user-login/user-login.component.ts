@@ -1,6 +1,7 @@
-import { Component, ElementRef, OnInit } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 import { AuthService, GoogleLoginProvider } from "angular-6-social-login-v2";
 import { UsuarioService } from "../../services/usuario.service";
+import { Router } from "@angular/router";
 
 @Component({
   selector: "app-user-login",
@@ -9,14 +10,34 @@ import { UsuarioService } from "../../services/usuario.service";
 })
 export class UserLoginComponent implements OnInit {
   constructor(
-    private elementRef: ElementRef,
     private socialAuthService: AuthService,
     private usuarioService: UsuarioService,
+    private router: Router
   ) {}
 
-  ngAfterViewInit() {
+  email = "";
+  password = "";
 
+  loginConfirm() {
+    this.usuarioService.buscarUsuarios().then((resultado: User[]) => {
+      console.log(resultado)
+      for (let i = 0; i < resultado.length; i++) {
+        if (
+          this.email == resultado[i].EMAIL &&
+          this.password == resultado[i].PASSWORD
+        ) {
+          this.router.navigate(["listrestaurante"]);
+          localStorage.setItem('USER', this.email)
+          console.log("deu certo porran")
+        }
+        else{
+          console.log("deu errado :9")
+        }
+      }
+    });
   }
+
+  ngAfterViewInit() {}
 
   public socialSignIn() {
     GoogleLoginProvider.PROVIDER_ID;
@@ -28,12 +49,10 @@ export class UserLoginComponent implements OnInit {
       });
   }
 
-  ngOnInit() {
-    this.usuarioService.buscarUsuarios().then(resultado => {
-      console.log('RESULT', resultado);
-    }).catch(erro => {
-      console.log('ERRO AO BUSCAR USUARIO', erro)
-    })
+  ngOnInit() {}
+}
 
-  }
+interface User {
+  EMAIL: string;
+  PASSWORD: string;
 }

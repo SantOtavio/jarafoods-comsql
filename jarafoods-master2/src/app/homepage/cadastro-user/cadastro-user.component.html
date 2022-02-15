@@ -3,15 +3,15 @@
     <div class="inputscontainer">
       <h1 class="register">Registre-se</h1>
 
-      <input class="name-signup" type="text" placeholder="Nome" />
+      <input class="name-signup" type="text" placeholder="Nome" [(ngModel)]='nome'/>
 
-      <input class="email-signup" type="email" placeholder="Email" />
+      <input class="email-signup" type="email" placeholder="Email" [(ngModel)]='email'/>
 
-      <input class="senha-signup" type="password" placeholder="Senha" />
+      <input class="senha-signup" type="password" placeholder="Senha"[(ngModel)]='password' />
 
       <input class="wasborn-signup" type="date" placeholder="Data Nascimento" />
 
-      <button class="registerconfirm" (click)="registerconfirm">Confirmar Registro</button>
+      <button class="registerconfirm" (click)="registerconfirm()">Confirmar Registro</button>
 
       <button class="googleregister" (click)="socialSignIn()">
         <svg

@@ -3,7 +3,7 @@ inserirRota("/buscar_usuario", (dados, resposta) => {
 
   database(`SELECT * FROM USUARIOS`)
     .then((result) => {
-      resposta({ list: result });
+      resposta( result );
     })
     .catch((erro) => {
       console.log("ERRO AO INSERIR USUARIO"),
@@ -22,12 +22,8 @@ inserirRota("/criar_usuario", (dados, resposta) => {
     return resposta({ erro: "É necessário preencher a senha" });
   }
 
-  if (!dados.idade) {
-    return resposta({ erro: "É necessário preencher a idade" });
-  }
-
-  database(`INSERT INTO USUARIOS (NOME, PASSWORD, IDADE)
-                VALUES ("${dados.nome}", "${dados.password}" , ${dados.idade})`)
+  database(`INSERT INTO USUARIOS (NOME, PASSWORD, EMAIL)
+                VALUES ("${dados.nome}", "${dados.password}" , ${dados.email})`)
     .then((result) => {
       console.log("USUARIO INSERIDO COM SUCESSO"),
         resposta({ message: "Usuario inserido com sucesso!" });
