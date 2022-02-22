@@ -1,98 +1,147 @@
-.logo-header-img {
-  width: 300px;
-  padding-right: 100px;
-  position: relative;
-  margin-left: -20px;
-}
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap");
 
-.header-container {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.text-list {
+.container {
+  height: 100vh;
+  width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-  margin: 10px 0px;
-  column-gap: 20px;
-  margin-left: -175px;
-  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-.restaurant-text {
-  font-size: 16px;
-  letter-spacing: 0.5px;
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-  color: #4d4d4d;
-}
-
-.restaurant-text:hover{
-  transition: .4s;
-  color: black;
-}
-
-.entregador-text {
-  font-size: 16px;
-  letter-spacing: 0.5px;
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-  color: #4d4d4d;
-}
-
-.entregador-text:hover{
-  transition: .4s;
-  color: black;
-}
-
-.suport-text {
-  font-size: 16px;
-  letter-spacing: 0.5px;
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-  color: #4d4d4d;
-}
-
-.suport-text:hover{
-  transition: .4s;
-  color: black;
-}
-
-.navigation-header {
+.inputscontainer {
   display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+  align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
-  column-gap: 30px;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 10%;
 }
 
-.signup-button {
-  background-color: transparent;
-  border: none;
-  font-size: 15px;
-  color: red;
-  font-weight: 700;
-  cursor: pointer;
+.signupcontainer {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  height: 80%;
+  border-top: 5px solid red;
+  left: 0;
+  top: 0;
+  box-shadow: 0px 0px 40px 16px rgba(0, 0, 0, 0.22);
 }
 
-.signin-button{
-  width: 90px;
-  height: 40px;
+.name-signup {
+  min-width: 60%;
+  min-height: 10%;
+  width: 60%;
+  height: 10%;
   border-radius: 10px;
-  background-color: red;
   border: none;
-  color: white;
-  font-weight: 700;
-  font-size: 15px;
-  cursor: pointer;
+  border: 1px solid black;
 }
 
-.signin-button:hover{
-  background-color: rgb(180, 0, 0);
-  transition: .4s;
+.name-signup:hover {
+  transition: 0.4s;
+  border-color: rgb(206, 55, 55);
+}
+
+.email-signup {
+  min-width: 60%;
+  min-height: 10%;
+  width: 60%;
+  height: 10%;
+  border-radius: 10px;
+  border: 1px solid black;
+}
+
+.email-signup:hover {
+  transition: 0.4s;
+  border-color: rgb(206, 55, 55);
+}
+
+.senha-signup {
+  min-width: 60%;
+  min-height: 10%;
+  width: 60%;
+  height: 10%;
+  border-radius: 10px;
+  border: 1px solid black;
+}
+
+.senha-signup:hover {
+  transition: 0.4s;
+  border-color: rgb(206, 55, 55);
+}
+
+.wasborn-signup {
+  width: 60%;
+  height: 10%;
+  min-width: 60%;
+  min-height: 10%;
+  border-radius: 10px;
+  border: 1px solid black;
+}
+
+.wasborn-signup:hover {
+  transition: 0.4s;
+  border-color: rgb(206, 55, 55);
+}
+
+.register {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  margin-bottom: -10px;
+}
+
+.register:hover {
+  transition: 0.4s;
+  border-color: rgb(206, 55, 55);
+}
+
+.googleregister {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 15px;
+  width: 60%;
+  height: 10%;
+  min-width: 60%;
+  min-height: 10%;
+  border-radius: 10px;
+  border-color: 1px black;
+  background-color: rgb(255, 255, 255);
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.googleregister:hover {
+  transition: 0.4s;
+  border-color: rgb(206, 55, 55);
+}
+
+.registerconfirm{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 15px;
+  width: 60%;
+  height: 10%;
+  min-width: 60%;
+  min-height: 10%;
+  border-radius: 10px;
+  border-color: 1px black;
+  background-color: rgb(255, 255, 255);
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.registerconfirm:hover{
+  transition: 0.4s;
+  border-color: rgb(12, 240, 23);
 }
