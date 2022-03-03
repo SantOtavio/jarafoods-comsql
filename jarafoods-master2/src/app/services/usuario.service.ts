@@ -20,6 +20,20 @@ export class UsuarioService {
     });
   }
 
+  buscarUsuariosRestaurante() {
+    return new Promise((resolvido, rejeitado) => {
+      fetch("/api/buscar_usuario_restaurante", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      })
+        .then((resultado) => resultado.json())
+        .then(resolvido)
+        .catch(rejeitado);
+    });
+  }
+
   cadastrarUsuarios(nome, password, email) {
     return new Promise((resolvido, rejeitado) => {
       fetch("/api/criar_usuario", {
@@ -28,6 +42,26 @@ export class UsuarioService {
           nome,
           password,
           email,
+        }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      })
+        .then((resultado) => resultado.json())
+        .then(resolvido)
+        .catch(rejeitado);
+    });
+  }
+
+  cadastrarRestaurante(nome, precodelievery, tipocomida, email) {
+    return new Promise((resolvido, rejeitado) => {
+      fetch("/api/cadastro_restaurante", {
+        method: "POST",
+        body: JSON.stringify({
+          nome,
+          precodelievery,
+          tipocomida,
+          email
         }),
         headers: {
           "Content-Type": "application/json",

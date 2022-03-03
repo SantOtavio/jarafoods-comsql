@@ -12,6 +12,10 @@ export class ListarestauranteComponent implements OnInit {
   ngOnInit() {
   }
 
+  editRest(){
+    this.router.navigate(["editrestaurante"])
+  }
+
   logout(){
     localStorage.removeItem('USER');
     this.router.navigate(["/"]);

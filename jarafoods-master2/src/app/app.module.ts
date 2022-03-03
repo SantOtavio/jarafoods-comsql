@@ -1,3 +1,5 @@
+import { EdtirestauranteMainComponent } from "./contentpage/edtirestaurante-main/edtirestaurante-main.component";
+import { EditrestauranteComponent } from "./contentpage/editrestaurante/editrestaurante.component";
 import { ThankspageComponent } from "./support/thankspage/thankspage.component";
 import { UserLoginComponent } from "./homepage/user-login/user-login.component";
 import { CadastroUserComponent } from "./homepage/cadastro-user/cadastro-user.component";
@@ -30,6 +32,7 @@ import {
 } from "angular-6-social-login-v2";
 import CheckLogged from "./checkLogged.canActivate";
 
+
 const routes: Routes = [
   { path: "", component: LoginComponent },
   { path: "*", redirectTo: "" },
@@ -39,7 +42,21 @@ const routes: Routes = [
   { path: "registrousuario", component: CadastroUserComponent },
   { path: "loginuser", component: UserLoginComponent },
   { path: "thankspage", component: ThankspageComponent },
-  { path: "listrestaurante", canActivate: [CheckLogged] , component:  ListarestauranteComponent  },
+  {
+    path: "listrestaurante",
+    canActivate: [CheckLogged],
+    component: ListarestauranteComponent,
+  },
+  {
+    path: "editrestaurante",
+    canActivate: [CheckLogged],
+    component: EditrestauranteComponent,
+  },
+  {
+    path: "editrestaurantemain",
+    canActivate: [CheckLogged],
+    component: EdtirestauranteMainComponent,
+  },
 ];
 
 export function getAuthServiceConfigs() {
@@ -55,7 +72,7 @@ export function getAuthServiceConfigs() {
 }
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, EdtirestauranteMainComponent],
   imports: [
     BrowserModule,
     HomepageModule,
@@ -73,7 +90,7 @@ export function getAuthServiceConfigs() {
       provide: AuthServiceConfig,
       useFactory: getAuthServiceConfigs,
     },
-    CheckLogged
+    CheckLogged,
   ],
   bootstrap: [AppComponent],
 })

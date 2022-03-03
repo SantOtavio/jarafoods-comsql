@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="signupcontainer">
+    <div class="inputscontainer">
+      <h1 class="register">Editor de Restaurantes</h1>
+      <div class="containerUpload">
+        <img [src]="imageURL" alt="" style="margin: -250px 0px 0px 309px" />
+        <form action="">
+          <div>
+            <i class="fas fa-image"></i>
+            <input
+              type="file"
+              name="arquivo"
+              id="arquivo"
+              (change)="mostrarImagem($event)"
+            />
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
