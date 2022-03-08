@@ -14,7 +14,7 @@ inserirRota("/buscar_usuario", (dados, resposta) => {
 inserirRota("/buscar_usuario_restaurante", (dados, resposta) => {
   console.log(dados);
 
-  database(`SELECT EMAIL FROM USUARIOS 
+  database(`SELECT EMAIL , RESTAURANTES.ID FROM USUARIOS 
   INNER JOIN RESTAURANTES
   ON RESTAURANTES.USUARIOS_EMAIL = USUARIOS.EMAIL 
   `)
@@ -39,7 +39,7 @@ inserirRota("/criar_usuario", (dados, resposta) => {
   }
 
   database(`INSERT INTO USUARIOS (NOME, PASSWORD, EMAIL)
-                VALUES ("${dados.nome}", "${dados.password}" , ${dados.email})`)
+                VALUES ("${dados.nome}", "${dados.password}" , "${dados.email}")`)
     .then((result) => {
       console.log("USUARIO INSERIDO COM SUCESSO"),
         resposta({ message: "Usuario inserido com sucesso!" });
@@ -47,6 +47,21 @@ inserirRota("/criar_usuario", (dados, resposta) => {
     .catch((erro) => {
       console.log("ERRO AO INSERIR USUARIO"),
         resposta({ message: "Usuario não foi inserido :(" });
+    });
+});
+
+inserirRota("/inserir_comida", (dados, resposta) => {
+  console.log(dados);
+
+  database(`INSERT INTO COMIDA (NOME, PRECOCOMIDA, IMAGEM, RESTAURANTE_ID)
+                VALUES ("${dados.nomeComida}", "${dados.preco}" , "${dados.foodImageURL}" , "${dados.restaurantID}")`)
+    .then((result) => {
+      console.log("USUARIO INSERIDO COM SUCESSO"),
+        resposta({ message: "Comida cadastrada com sucesso" });
+    })
+    .catch((erro) => {
+      console.log("ERRO AO INSERIR USUARIO"),
+        resposta({ message: "comida nao cadastrada :(" });
     });
 });
 

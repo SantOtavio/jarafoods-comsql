@@ -28,7 +28,6 @@ export class UserLoginComponent implements OnInit {
         ) {
           this.router.navigate(["listrestaurante"]);
           localStorage.setItem('USER', this.email)
-          console.log("deu certo porran")
         }
         else{
           console.log("deu errado :9")

@@ -27,6 +27,7 @@ export class EditrestauranteComponent implements OnInit {
         ) {
           this.router.navigate(["editrestaurantemain"]);
           localStorage.setItem('RESTAURANTE', this.email)
+          localStorage.setItem('ID', resultado[i].ID)
         }
         else{
           console.log("deu errado :9")
@@ -39,5 +40,6 @@ export class EditrestauranteComponent implements OnInit {
 
 interface User {
   EMAIL: string;
+  ID: string;
 }
 

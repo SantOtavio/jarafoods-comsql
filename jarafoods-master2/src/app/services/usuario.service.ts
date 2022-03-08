@@ -61,7 +61,27 @@ export class UsuarioService {
           nome,
           precodelievery,
           tipocomida,
-          email
+          email,
+        }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      })
+        .then((resultado) => resultado.json())
+        .then(resolvido)
+        .catch(rejeitado);
+    });
+  }
+
+  enviarImagem(foodImageURL , preco , nomeComida , restaurantID) {
+    return new Promise((resolvido, rejeitado) => {
+      fetch("/api/inserir_comida", {
+        method: "POST",
+        body: JSON.stringify({
+          nomeComida,
+          preco,
+          foodImageURL,
+          restaurantID
         }),
         headers: {
           "Content-Type": "application/json",

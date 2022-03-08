@@ -3,16 +3,56 @@
     <div class="inputscontainer">
       <h1 class="register">Editor de Restaurantes</h1>
       <div class="containerUpload">
-        <img [src]="imageURL" alt="" style="margin: -250px 0px 0px 309px" />
         <form action="">
-          <div>
-            <i class="fas fa-image"></i>
-            <input
-              type="file"
-              name="arquivo"
-              id="arquivo"
-              (change)="mostrarImagem($event)"
-            />
+          <div class="principalContainer">
+            <div class="restaurantNameContainer">
+              <i class="fas fa-image"></i>
+              <p class="texts">Adicione a imagem do restaurante</p>
+              <input
+                type="file"
+                name="arquivo"
+                id="arquivo"
+                (change)="restaurantImage($event)"
+              />
+              <img class="imgRestaurant" [src]="restaurantImageURL" />
+            </div>
+            <div class="foodImageContainer">
+              <i class="fas fa-image"></i>
+              <p class="texts">Adicione a imagem da comida</p>
+              <div class="foodFileContainer">
+                <input
+                  type="file"
+                  name="arquivo"
+                  id="arquivo"
+                  (change)="foodImage($event)"
+                />
+                <img class="imgFood" [src]="foodImageURL" />
+              </div>
+              <div class="foodnameFlexbox">
+                <input
+                  name="nomeComida"
+                  class="nomeComida"
+                  type="text"
+                  [(ngModel)]="nomeComida"
+                  placeholder="Insira o nome da comida"
+                />
+              </div>
+              <div class="foodpriceFlexbox">
+                <input
+                  name="precoComida"
+                  class="precoComida"
+                  type="text"
+                  [(ngModel)]="preco"
+                  placeholder="Insira o preço da comida"
+                />
+              </div>
+              <button class="sendToArray" (click)="confirmIMG()">
+                Confirmar comida
+              </button>
+            </div>
+            <button class="confirmEditionButton" (click)="confirmEdition()">
+              Confirmar Edição
+            </button>
           </div>
         </form>
       </div>
