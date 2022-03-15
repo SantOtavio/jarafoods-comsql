@@ -19,19 +19,16 @@ export class UserLoginComponent implements OnInit {
   password = "";
 
   loginConfirm() {
-    this.usuarioService.buscarUsuarios().then((resultado: User[]) => {
+    this.usuarioService.buscarUsuarios(this.email , this.password).then((resultado) => {
       console.log(resultado)
-      for (let i = 0; i < resultado.length; i++) {
         if (
-          this.email == resultado[i].EMAIL &&
-          this.password == resultado[i].PASSWORD
+          this.email == resultado[0].EMAIL
         ) {
           this.router.navigate(["listrestaurante"]);
           localStorage.setItem('USER', this.email)
         }
         else{
           console.log("deu errado :9")
-        }
       }
     });
   }
@@ -53,5 +50,4 @@ export class UserLoginComponent implements OnInit {
 
 interface User {
   EMAIL: string;
-  PASSWORD: string;
 }

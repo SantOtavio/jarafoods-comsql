@@ -49,12 +49,16 @@ export class EdtirestauranteMainComponent implements OnInit {
       preco: this.preco,
       nomeComida: this.nomeComida,
     });
+    this.preco = "";
+    this.nomeComida = "";
+    this.foodImageURL = "";
     console.log(this.imgarray);
   }
 
   confirmEdition() {
     for(let i = 0; i < this.imgarray.length ; i++){
-      this.usuarioService.enviarImagem(this.imgarray[i].nomeComida, this.imgarray[i].preco, this.imgarray[i].foodImageURL, localStorage.getItem("ID"));
+      console.log(this.imgarray[i].image)
+      this.usuarioService.enviarImagem(this.imgarray[i].nomeComida, this.imgarray[i].preco, this.imgarray[i].image, localStorage.getItem("ID"));
     }
   }
 

@@ -1,7 +1,7 @@
 inserirRota("/buscar_usuario", (dados, resposta) => {
   console.log(dados);
 
-  database(`SELECT * FROM USUARIOS`)
+  database(`SELECT EMAIL FROM USUARIOS WHERE EMAIL = "${dados.email}" AND PASSWORD = "${dados.password}" `)
     .then((result) => {
       resposta( result );
     })
@@ -84,7 +84,7 @@ inserirRota("/cadastro_restaurante", (dados, resposta) => {
   database(`INSERT INTO RESTAURANTES (NOME, PRECODELIEVERY, TIPOCOMIDA , USUARIOS_EMAIL)
                 VALUES ("${dados.nome}", "${dados.precodelievery}" , "${dados.tipocomida}" , "${dados.email}")`)
     .then((result) => {
-      console.log("RESTAURANTE CADASTRADO COM SUCESSO"),
+      console.log(dados.foodImageURL),
         resposta({ message: "Restaurante cadastrado com sucesso!" });
     })
     .catch((erro) => {
