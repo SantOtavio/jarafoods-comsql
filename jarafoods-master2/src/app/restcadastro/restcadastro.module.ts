@@ -6,7 +6,7 @@ import { FormsModule } from "@angular/forms";
 import { Routes, RouterModule } from "@angular/router";
 
 @NgModule({
-  imports: [CommonModule , FormsModule],
+  imports: [CommonModule , FormsModule , RouterModule],
   declarations: [CadastrorestauranteComponent],
 })
 export class RestcadastroModule {}

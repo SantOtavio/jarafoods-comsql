@@ -17,12 +17,12 @@ export class EditrestauranteComponent implements OnInit {
 
   submitFetch() {
     this.usuarioService
-      .buscarUsuarios(this.email, this.password)
+      .buscarUsuariosRestaurante()
       .then((resultado) => {
         console.log(resultado);
-        if (this.email == resultado[0].EMAIL) {
+        if (localStorage.getItem("USER") == resultado[0].EMAIL) {
           this.router.navigate(["editrestaurantemain"]);
-          localStorage.setItem("USER", this.email);
+          localStorage.setItem("ID", resultado[0].ID);
         } else {
           console.log("deu errado :9");
         }

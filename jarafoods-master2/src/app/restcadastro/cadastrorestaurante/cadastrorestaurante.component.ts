@@ -24,8 +24,19 @@ export class CadastrorestauranteComponent implements OnInit {
       this.nome,
       this.precoDelievery,
       this.tipocomida,
-      this.email
+      this.email,
+      this.restimageurl
     );
+  }
+
+  restimageurl;
+
+  foodImage(event) {
+    const file = new FileReader();
+    file.onload = (e) => {
+      this.restimageurl = e.target.result;
+    };
+    file.readAsDataURL(event.target.files[0]);
   }
 
   // imageURL;

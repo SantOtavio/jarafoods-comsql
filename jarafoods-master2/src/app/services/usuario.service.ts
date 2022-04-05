@@ -6,7 +6,7 @@ import { Injectable } from "@angular/core";
 export class UsuarioService {
   constructor() {}
 
-  buscarUsuarios(email , password) {
+  buscarUsuarios(email, password) {
     return new Promise((resolvido, rejeitado) => {
       fetch("/api/buscar_usuario", {
         method: "POST",
@@ -57,7 +57,7 @@ export class UsuarioService {
     });
   }
 
-  cadastrarRestaurante(nome, precodelievery, tipocomida, email) {
+  cadastrarRestaurante(nome, precodelievery, tipocomida, imagem, email) {
     return new Promise((resolvido, rejeitado) => {
       fetch("/api/cadastro_restaurante", {
         method: "POST",
@@ -66,6 +66,7 @@ export class UsuarioService {
           precodelievery,
           tipocomida,
           email,
+          imagem,
         }),
         headers: {
           "Content-Type": "application/json",
@@ -77,7 +78,7 @@ export class UsuarioService {
     });
   }
 
-  enviarImagem(nomeComida , preco , image , restaurantID) {
+  enviarImagem(nomeComida, preco, image, restaurantID) {
     return new Promise((resolvido, rejeitado) => {
       fetch("/api/inserir_comida", {
         method: "POST",
@@ -85,7 +86,7 @@ export class UsuarioService {
           nomeComida,
           preco,
           image,
-          restaurantID
+          restaurantID,
         }),
         headers: {
           "Content-Type": "application/json",

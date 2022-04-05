@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { ListarestauranteComponent } from './listarestaurante/listarestaurante.component';
 import { Router } from '@angular/router';
 import { EditrestauranteComponent } from './editrestaurante/editrestaurante.component';
+import { RestpageComponent } from './restpage/restpage.component';
 
 
 @NgModule({
@@ -11,6 +12,6 @@ import { EditrestauranteComponent } from './editrestaurante/editrestaurante.comp
     CommonModule,
     FormsModule
   ],
-  declarations: [ListarestauranteComponent, EditrestauranteComponent]
+  declarations: [ListarestauranteComponent, EditrestauranteComponent, RestpageComponent]
 })
 export class ContentpageModule { }

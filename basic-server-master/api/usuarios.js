@@ -1,6 +1,5 @@
 inserirRota("/buscar_usuario", (dados, resposta) => {
   console.log(dados);
-
   database(`SELECT EMAIL FROM USUARIOS WHERE EMAIL = "${dados.email}" AND PASSWORD = "${dados.password}" `)
     .then((result) => {
       resposta( result );
@@ -13,7 +12,6 @@ inserirRota("/buscar_usuario", (dados, resposta) => {
 
 inserirRota("/buscar_usuario_restaurante", (dados, resposta) => {
   console.log(dados);
-
   database(`SELECT EMAIL , RESTAURANTES.ID FROM USUARIOS 
   INNER JOIN RESTAURANTES
   ON RESTAURANTES.USUARIOS_EMAIL = USUARIOS.EMAIL 
@@ -81,8 +79,8 @@ inserirRota("/cadastro_restaurante", (dados, resposta) => {
     return resposta({ erro: "É necessário preencher o tipo de comida" });
   }
 
-  database(`INSERT INTO RESTAURANTES (NOME, PRECODELIEVERY, TIPOCOMIDA , USUARIOS_EMAIL)
-                VALUES ("${dados.nome}", "${dados.precodelievery}" , "${dados.tipocomida}" , "${dados.email}")`)
+  database(`INSERT INTO RESTAURANTES
+                VALUES (null , "${dados.nome}", "${dados.precodelievery}" , "${dados.tipocomida}" , "${dados.imagem}" ,"${dados.email}")`)
     .then((result) => {
       console.log(dados.foodImageURL),
         resposta({ message: "Restaurante cadastrado com sucesso!" });

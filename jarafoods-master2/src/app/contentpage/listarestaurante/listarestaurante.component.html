@@ -1,7 +1,11 @@
 <header>
   <div class="containerheader">
-    <img class="headerlogo" src="../../../../simple-logo-jarafoods.png">
-    <input type="search" class="search-header" placeholder="Busque uma comida!">
+    <img class="headerlogo" src="../../../../simple-logo-jarafoods.png" />
+    <input
+      type="search"
+      class="search-header"
+      placeholder="Busque um restaurante!"
+    />
     <a class="editRest" (click)="editRest()">Edite seu restaurante</a>
     <button class="logout" (click)="logout()">Logout</button>
   </div>
@@ -9,6 +13,19 @@
 
 <main>
   <ul class="listacomidas">
-
+    <li class="item-list" (click)="goToRestPage()" *ngFor="let listas of restlist[0]">
+      <div class="name-rests">
+        {{ listas.NOME }}
+      </div>
+      <div class="delieveryprice">
+       Taxa de entrega: {{ listas.PRECODELIEVERY }}
+      </div>
+      <div class="foodtype">
+       Tipo de comida:  {{ listas.TIPOCOMIDA }}
+      </div>
+      <div class="restimg">
+        <img class="restimgmain" src="{{ listas.USUARIOS_EMAIL }}" />
+      </div>
+    </li>
   </ul>
 </main>

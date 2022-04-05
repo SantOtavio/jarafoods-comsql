@@ -1,3 +1,4 @@
+import { THIS_EXPR } from "@angular/compiler/src/output/output_ast";
 import { Component, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
 import { UsuarioService } from "src/app/services/usuario.service";
@@ -60,6 +61,7 @@ export class EdtirestauranteMainComponent implements OnInit {
       console.log(this.imgarray[i].image)
       this.usuarioService.enviarImagem(this.imgarray[i].nomeComida, this.imgarray[i].preco, this.imgarray[i].image, localStorage.getItem("ID"));
     }
+    this.router.navigate(["listrestaurante"])
   }
 
 }

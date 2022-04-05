@@ -1,3 +1,4 @@
+import { RestpageComponent } from './contentpage/restpage/restpage.component';
 import { EdtirestauranteMainComponent } from "./contentpage/edtirestaurante-main/edtirestaurante-main.component";
 import { EditrestauranteComponent } from "./contentpage/editrestaurante/editrestaurante.component";
 import { ThankspageComponent } from "./support/thankspage/thankspage.component";
@@ -56,6 +57,11 @@ const routes: Routes = [
     path: "editrestaurantemain",
     canActivate: [CheckLogged],
     component: EdtirestauranteMainComponent,
+  },
+  {
+    path: "restpage",
+    canActivate: [CheckLogged],
+    component: RestpageComponent,
   },
 ];
 

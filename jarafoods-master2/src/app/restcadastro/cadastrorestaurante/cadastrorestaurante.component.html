@@ -7,29 +7,40 @@
         class="inputs"
         type="text"
         placeholder="Insira o nome do seu restaurante"
-        [(ngModel)]='nome'
+        [(ngModel)]="nome"
       />
       <input
         class="inputs"
         type="text"
         placeholder="Insira o preço de entrega do seu restaurante"
-        [(ngModel)]='precoDelievery'
+        [(ngModel)]="precoDelievery"
       />
       <input
         class="inputs"
         type="text"
         placeholder="Insira o tipo de comida vendida no seu restaurante"
-        [(ngModel)]='tipocomida'
+        [(ngModel)]="tipocomida"
       />
 
       <input
-      class="inputs"
-      type="text"
-      placeholder="Insira o email cadastrado no JaraFoods!"
-      [(ngModel)]='email'
-    />
+        class="inputs"
+        type="text"
+        placeholder="Insira o email cadastrado no JaraFoods!"
+        [(ngModel)]="email"
+      />
 
-      <button class="submitRegister" (click)="submitRegister()">Confirmar cadastro</button>
+      <input
+        class="inputs"
+        type="file"
+        name="arquivo"
+        id="arquivo"
+        (change)="foodImage($event)"
+      />
+      <img class="imgFood" [src]="restimageurl" />
+
+      <button class="submitRegister" (click)="submitRegister()">
+        Confirmar cadastro
+      </button>
     </div>
   </div>
 </div>
