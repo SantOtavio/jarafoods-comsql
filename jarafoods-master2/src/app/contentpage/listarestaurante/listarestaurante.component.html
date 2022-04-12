@@ -13,19 +13,21 @@
 
 <main>
   <ul class="listacomidas">
-    <li class="item-list" (click)="goToRestPage()" *ngFor="let listas of restlist[0]">
-      <div class="name-rests">
-        {{ listas.NOME }}
-      </div>
-      <div class="delieveryprice">
-       Taxa de entrega: {{ listas.PRECODELIEVERY }}
-      </div>
-      <div class="foodtype">
-       Tipo de comida:  {{ listas.TIPOCOMIDA }}
-      </div>
-      <div class="restimg">
-        <img class="restimgmain" src="{{ listas.USUARIOS_EMAIL }}" />
-      </div>
+    <li class="item-list" *ngFor="let listas of restlist[0]">
+      <a (click)="goToRestPage(listas.ID)">
+        <div class="name-rests">
+          {{ listas.NOME }}
+        </div>
+        <div class="delieveryprice">
+         Taxa de entrega: {{ listas.PRECODELIEVERY }}
+        </div>
+        <div class="foodtype">
+         Tipo de comida:  {{ listas.TIPOCOMIDA }}
+        </div>
+        <div class="restimg">
+          <img class="restimgmain" src="{{ listas.IMAGEM }}" />
+        </div>
+      </a>
     </li>
   </ul>
 </main>

@@ -81,13 +81,14 @@ cursor: pointer;
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
+  row-gap: 50px;
   column-gap: 50px;
   margin-top: 100px;
 }
 
 .item-list{
+  box-shadow: 0.5px 0.5px 12px 0.5px;
   cursor: pointer;
-  border: 1px solid black;
   list-style: none;
   border-radius: 15px;
   display: flex;

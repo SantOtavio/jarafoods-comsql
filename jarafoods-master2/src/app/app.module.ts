@@ -80,6 +80,7 @@ export function getAuthServiceConfigs() {
 @NgModule({
   declarations: [AppComponent, EdtirestauranteMainComponent],
   imports: [
+    ContentpageModule,
     BrowserModule,
     HomepageModule,
     RestcadastroModule,
@@ -87,9 +88,8 @@ export function getAuthServiceConfigs() {
     SupportModule,
     SocialLoginModule,
     RouterModule.forRoot(routes),
-    FormsModule,
     ReactiveFormsModule,
-    ContentpageModule,
+    FormsModule,
   ],
   providers: [
     {

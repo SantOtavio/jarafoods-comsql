@@ -30,12 +30,14 @@ export class ListarestauranteComponent implements OnInit {
 
   findRests() {
     this.RestaurantelistService.buscarRestaurante().then((resultado) => {
+      console.log(resultado)
       this.restlist.push(resultado);
     });
     console.log(this.restlist);
   }
 
-  goToRestPage(){
+  goToRestPage(id){
+    localStorage.setItem("ID", id)
     this.router.navigate(["restpage"])
   }
 }

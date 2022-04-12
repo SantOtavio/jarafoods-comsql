@@ -21,4 +21,21 @@ export class RestaurantelistService {
         .catch(rejeitado);
     });
   }
+
+  buscarComidas(id) {
+    return new Promise((resolvido, rejeitado) => {
+      fetch("/api/buscarComidas", {
+        method: "POST",
+        body: JSON.stringify({
+          id
+        }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      })
+        .then((resultado) => resultado.json())
+        .then(resolvido)
+        .catch(rejeitado);
+    });
+  }
 }

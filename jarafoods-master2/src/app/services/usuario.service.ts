@@ -65,8 +65,8 @@ export class UsuarioService {
           nome,
           precodelievery,
           tipocomida,
-          email,
           imagem,
+          email,
         }),
         headers: {
           "Content-Type": "application/json",

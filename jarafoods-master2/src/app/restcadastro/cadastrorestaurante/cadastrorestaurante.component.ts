@@ -24,8 +24,8 @@ export class CadastrorestauranteComponent implements OnInit {
       this.nome,
       this.precoDelievery,
       this.tipocomida,
-      this.email,
-      this.restimageurl
+      this.restimageurl,
+      this.email
     );
   }
 

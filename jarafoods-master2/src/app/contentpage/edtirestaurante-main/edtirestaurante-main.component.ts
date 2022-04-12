@@ -1,4 +1,4 @@
-import { THIS_EXPR } from "@angular/compiler/src/output/output_ast";
+
 import { Component, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
 import { UsuarioService } from "src/app/services/usuario.service";
@@ -12,14 +12,14 @@ export class EdtirestauranteMainComponent implements OnInit {
   constructor(private router: Router, private usuarioService: UsuarioService) {}
 
   ngOnInit() {
-    this.verifRest();
+    // this.verifRest();
   }
 
-  verifRest() {
-    if (!localStorage.getItem("RESTAURANTE")) {
-      this.router.navigate(["listrestaurante"]);
-    }
-  }
+  // verifRest() {
+  //   if (!localStorage.getItem("RESTAURANTE")) {
+  //     this.router.navigate(["editrestaurante"]);
+  //   }
+  // }
 
   foodImageURL;
   restaurantImageURL;

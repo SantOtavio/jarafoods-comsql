@@ -12,19 +12,23 @@ export class EditrestauranteComponent implements OnInit {
 
   ngOnInit() {}
 
-  email = "";
-  password = "";
+  email = ""
+  password = ""
+
+  loginArray = []
 
   submitFetch() {
     this.usuarioService
       .buscarUsuariosRestaurante()
       .then((resultado) => {
-        console.log(resultado);
-        if (localStorage.getItem("USER") == resultado[0].EMAIL) {
-          this.router.navigate(["editrestaurantemain"]);
-          localStorage.setItem("ID", resultado[0].ID);
-        } else {
-          console.log("deu errado :9");
+        this.loginArray.push(resultado)
+        for(let i = 0; i < this.loginArray.length ; i++){
+          if (localStorage.getItem("USER") == resultado[i].EMAIL) {
+            localStorage.setItem("ID", resultado[i].ID);
+            this.router.navigate(["editrestaurantemain"]);
+          } else {
+            console.log("deu errado :9");
+          }
         }
       });
   }

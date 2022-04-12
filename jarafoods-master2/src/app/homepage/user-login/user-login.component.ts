@@ -20,7 +20,7 @@ export class UserLoginComponent implements OnInit {
 
   loginConfirm() {
     this.usuarioService.buscarUsuarios(this.email , this.password).then((resultado) => {
-      console.log(resultado)
+      console.log(resultado[0])
         if (
           this.email == resultado[0].EMAIL
         ) {
