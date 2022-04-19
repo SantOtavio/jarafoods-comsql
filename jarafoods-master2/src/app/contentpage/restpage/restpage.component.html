@@ -1,11 +1,6 @@
 <header>
   <div class="containerheader">
     <img class="headerlogo" src="../../../../simple-logo-jarafoods.png" />
-    <input
-      type="search"
-      class="search-header"
-      placeholder="Busque um restaurante!"
-    />
     <button class="logout" (click)="backToList()">Voltar</button>
   </div>
 </header>
@@ -31,6 +26,9 @@
           <div class="priceFoods">Preço: R${{ listas.PRECOCOMIDA }}</div>
           <div class="foodIMG">
             <img class="restimgmain" src="{{ listas.IMAGEM }}" />
+          </div>
+          <div class="sendToCart">
+            <button class="sendToCartButton" (click)="sendToCartButton(listas.ID)">Adicionar ao Carrinho</button>
           </div>
         </a>
       </li>

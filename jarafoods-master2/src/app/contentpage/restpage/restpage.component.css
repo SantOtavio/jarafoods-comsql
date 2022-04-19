@@ -25,27 +25,12 @@ display: flex;
 align-items: center;
 row-gap: 3%;
 width: 100%;
-justify-content: space-evenly;
+justify-content: space-between;
 box-shadow: 0px 0px 8px 3px rgba(0, 0, 0, 0.22);
 }
 
 .headerlogo{
   width: 30%;
-}
-
-.search-header{
-  align-self: center;
-  width: 15%;
-  height: 38px;
-  border-radius: 10px;
-  outline: none;
-  border-width: 1px;
-  border-style: inset;
-}
-
-.search-header:hover{
-  transition: .2s;
-  border-color: red;
 }
 
 .logout{
@@ -58,6 +43,7 @@ box-shadow: 0px 0px 8px 3px rgba(0, 0, 0, 0.22);
   font-weight: 700;
   font-size: 15px;
   cursor: pointer;
+  margin-right: 30pxdd;
 }
 
 .logout:hover{
@@ -82,7 +68,6 @@ cursor: pointer;
   width: 65%;
   border-radius: 39px;
   margin: 8px 8px 8px 8px;
-  border: solid 0.5px black;
 }
 
 .restimg{
@@ -104,7 +89,6 @@ cursor: pointer;
 }
 
 .item-list{
-  box-shadow: 0.5px 0.5px 12px 0.5px;
   cursor: pointer;
   list-style: none;
   border-radius: 15px;
@@ -116,6 +100,13 @@ cursor: pointer;
   row-gap: 5px;
   min-width: 300px;
   max-width: 300px;
+  min-height: 400px;
+  max-height: 400px;
+}
+
+.item-list:hover{
+  transition: .4s;
+  box-shadow: 0.5px 0.5px 12px 0.5px;
 }
 
 .name-rests{

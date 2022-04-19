@@ -25,7 +25,8 @@ export class UserLoginComponent implements OnInit {
           this.email == resultado[0].EMAIL
         ) {
           this.router.navigate(["listrestaurante"]);
-          localStorage.setItem('USER', this.email)
+          localStorage.setItem('USER', this.email);
+          localStorage.setItem('IDUSER', resultado[0].ID)
         }
         else{
           console.log("deu errado :9")

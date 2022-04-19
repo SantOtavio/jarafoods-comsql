@@ -33,4 +33,12 @@ export class RestpageComponent implements OnInit {
       }
     );
   }
+
+  sendToCartButton(id) {
+    this.RestaurantelistService.inserirCarrinho(
+      localStorage.getItem("IDUSER"),
+      id,
+      localStorage.getItem("ID")
+    );
+  }
 }

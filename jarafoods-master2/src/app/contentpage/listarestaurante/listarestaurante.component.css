@@ -1,23 +1,23 @@
-header{
+header {
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
 
-.containerheader{
-display: flex;
-align-items: center;
-row-gap: 3%;
-width: 100%;
-justify-content: space-evenly;
-box-shadow: 0px 0px 8px 3px rgba(0, 0, 0, 0.22);
+.containerheader {
+  display: flex;
+  align-items: center;
+  row-gap: 3%;
+  width: 100%;
+  justify-content: space-evenly;
+  box-shadow: 0px 0px 8px 3px rgba(0, 0, 0, 0.22);
 }
 
-.headerlogo{
+.headerlogo {
   width: 30%;
 }
 
-.search-header{
+.search-header {
   align-self: center;
   width: 15%;
   height: 38px;
@@ -27,12 +27,12 @@ box-shadow: 0px 0px 8px 3px rgba(0, 0, 0, 0.22);
   border-style: inset;
 }
 
-.search-header:hover{
-  transition: .2s;
+.search-header:hover {
+  transition: 0.2s;
   border-color: red;
 }
 
-.logout{
+.logout {
   width: 90px;
   height: 40px;
   border-radius: 10px;
@@ -44,37 +44,36 @@ box-shadow: 0px 0px 8px 3px rgba(0, 0, 0, 0.22);
   cursor: pointer;
 }
 
-.logout:hover{
-transition: .2s;
-background-color: rgb(216, 0, 0);
-cursor: pointer;
+.logout:hover {
+  transition: 0.2s;
+  background-color: rgb(216, 0, 0);
+  cursor: pointer;
 }
 
-
-.editRest{
+.editRest {
   font-size: 18px;
   letter-spacing: 0.5px;
   border: none;
   background-color: transparent;
   cursor: pointer;
   color: #4d4d4d;
-  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
-.restimgmain{
+.restimgmain {
   width: 65%;
   border-radius: 39px;
   margin: 8px 8px 8px 8px;
   border: solid 0.5px black;
 }
 
-.restimg{
+.restimg {
   width: 200px;
   display: flex;
   justify-content: center;
 }
 
-.listacomidas{
+.listacomidas {
   padding-left: 0px;
   width: 100%;
   display: flex;
@@ -86,7 +85,7 @@ cursor: pointer;
   margin-top: 100px;
 }
 
-.item-list{
+.item-list {
   box-shadow: 0.5px 0.5px 12px 0.5px;
   cursor: pointer;
   list-style: none;
@@ -101,6 +100,23 @@ cursor: pointer;
   max-width: 300px;
 }
 
-.name-rests{
-font-size: 30px;
+.name-rests {
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.delieveryprice {
+  display: flex;
+  justify-content: center;
+}
+
+.foodtype {
+  display: flex;
+  justify-content: center;
+}
+
+.restimg {
+  display: flex;
+  justify-content: center;
 }

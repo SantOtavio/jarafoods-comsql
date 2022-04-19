@@ -38,4 +38,23 @@ export class RestaurantelistService {
         .catch(rejeitado);
     });
   }
+
+  inserirCarrinho(emailUser , idFood , idRestaurante) {
+    return new Promise((resolvido, rejeitado) => {
+      fetch("/api/inserir_carrinho", {
+        method: "POST",
+        body: JSON.stringify({
+          emailUser,
+          idFood,
+          idRestaurante
+        }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      })
+        .then((resultado) => resultado.json())
+        .then(resolvido)
+        .catch(rejeitado);
+    });
+  }
 }

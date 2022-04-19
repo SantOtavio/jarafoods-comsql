@@ -12,7 +12,7 @@ database(`CREATE TABLE IF NOT EXISTS USUARIOS (
     ID INTEGER PRIMARY KEY AUTOINCREMENT,
     NOME varchar(30),
     PASSWORD VARCHAR(30),
-    EMAIL VARCHAR(150) NOT NULL 
+    EMAIL VARCHAR(150) NOT NULL
     )`).then(result => {
     console.log('TABELA CRIADA COM SUCESSO')
 }).catch(erro => {
@@ -42,6 +42,23 @@ database(`CREATE TABLE IF NOT EXISTS COMIDA (
     IMAGEM varchar(99999999) not null,
     RESTAURANTE_ID INTEGER NOT NULL,
     foreign key(RESTAURANTE_ID) references RESTAURANTES(ID)
+    on delete cascade on update cascade
+    )`).then(result => {
+    console.log('TABELA CRIADA COM SUCESSO')
+}).catch(erro => {
+    console.log("TABELA COM ERRO NA CRIAÇÃO")
+});
+
+database(`CREATE TABLE IF NOT EXISTS CARRINHO (
+    ID INTEGER PRIMARY KEY AUTOINCREMENT,
+    EMAILUSER varchar(100) not null,
+    ID_COMIDA INTEGER not null,
+    RESTAURANTE_ID INTEGER NOT NULL,
+    foreign key(RESTAURANTE_ID) references RESTAURANTES(ID)
+    on delete cascade on update cascade,
+    foreign key(EMAILUSER) references USUARIOS(EMAIL)
+    on delete cascade on update cascade,
+    foreign key(ID_COMIDA) references COMIDA(ID)
     on delete cascade on update cascade
     )`).then(result => {
     console.log('TABELA CRIADA COM SUCESSO')
