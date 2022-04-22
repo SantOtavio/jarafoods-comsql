@@ -1,7 +1,12 @@
 <header>
   <div class="containerheader">
     <img class="headerlogo" src="../../../../simple-logo-jarafoods.png" />
-    <button class="logout" (click)="backToList()">Voltar</button>
+    <div class="cart-and-back">
+      <a class="goToCartPage" (click)="goToCartPage()">
+        <img class="cartimg" src="../../../../shopping-cart.png" />
+      </a>
+      <button class="logout" (click)="backToList()">Voltar</button>
+    </div>
   </div>
 </header>
 
@@ -28,7 +33,12 @@
             <img class="restimgmain" src="{{ listas.IMAGEM }}" />
           </div>
           <div class="sendToCart">
-            <button class="sendToCartButton" (click)="sendToCartButton(listas.ID)">Adicionar ao Carrinho</button>
+            <button
+              class="sendToCartButton"
+              (click)="sendToCartButton(listas.ID , listas.NOME, listas.PRECOCOMIDA)"
+            >
+              Adicionar ao Carrinho
+            </button>
           </div>
         </a>
       </li>

@@ -39,14 +39,33 @@ export class RestaurantelistService {
     });
   }
 
-  inserirCarrinho(emailUser , idFood , idRestaurante) {
+  inserirCarrinho(emailUser , idFood , idRestaurante , nomecomida , precocomida) {
     return new Promise((resolvido, rejeitado) => {
       fetch("/api/inserir_carrinho", {
         method: "POST",
         body: JSON.stringify({
           emailUser,
           idFood,
-          idRestaurante
+          idRestaurante,
+          nomecomida,
+          precocomida
+        }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      })
+        .then((resultado) => resultado.json())
+        .then(resolvido)
+        .catch(rejeitado);
+    });
+  }
+
+  buscarCarrinho(email) {
+    return new Promise((resolvido, rejeitado) => {
+      fetch("/api/buscarCarrinho", {
+        method: "POST",
+        body: JSON.stringify({
+          email
         }),
         headers: {
           "Content-Type": "application/json",

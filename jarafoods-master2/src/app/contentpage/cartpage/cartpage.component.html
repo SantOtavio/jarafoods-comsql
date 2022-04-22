@@ -1,0 +1,8 @@
+<ul class="listacomidas">
+  <li class="item-list" *ngFor="let listas of foodList[0]">
+      <div class="foodName">
+        {{ listas.NOMECOMIDA }}
+      </div>
+      <div class="priceFoods">Preço: R${{ listas.PRECOCOMIDA }}</div>
+  </li>
+</ul>

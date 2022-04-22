@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { ListarestauranteComponent } from './listarestaurante/listarestaurante.component';
 import { EditrestauranteComponent } from './editrestaurante/editrestaurante.component';
 import { RestpageComponent } from './restpage/restpage.component';
+import { CartpageComponent } from './cartpage/cartpage.component';
 
 
 
@@ -12,6 +13,6 @@ import { RestpageComponent } from './restpage/restpage.component';
     CommonModule,
     FormsModule
   ],
-  declarations: [ListarestauranteComponent, EditrestauranteComponent, RestpageComponent]
+  declarations: [ListarestauranteComponent, EditrestauranteComponent, RestpageComponent, CartpageComponent]
 })
 export class ContentpageModule {}

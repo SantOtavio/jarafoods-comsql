@@ -32,6 +32,7 @@ import {
   GoogleLoginProvider,
 } from "angular-6-social-login-v2";
 import CheckLogged from "./checkLogged.canActivate";
+import { CartpageComponent } from './contentpage/cartpage/cartpage.component';
 
 
 const routes: Routes = [
@@ -62,6 +63,11 @@ const routes: Routes = [
     path: "restpage",
     canActivate: [CheckLogged],
     component: RestpageComponent,
+  },
+  {
+    path: "cartpage",
+    canActivate: [CheckLogged],
+    component: CartpageComponent
   },
 ];
 

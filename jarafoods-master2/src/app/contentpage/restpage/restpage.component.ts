@@ -34,11 +34,21 @@ export class RestpageComponent implements OnInit {
     );
   }
 
-  sendToCartButton(id) {
+  sendToCartButton(id , nomecomida , precocomida) {
     this.RestaurantelistService.inserirCarrinho(
-      localStorage.getItem("IDUSER"),
+      localStorage.getItem("USER"),
       id,
-      localStorage.getItem("ID")
-    );
+      localStorage.getItem("ID"),
+      nomecomida,
+      precocomida
+    ).then((result) => {
+      alert("Item inserido ao carrinho")
+    }).catch((erro) => {
+      alert("Erro ao inserir item no carrinho")
+    })
+  }
+
+  goToCartPage(){
+    this.router.navigate(["cartpage"])
   }
 }
