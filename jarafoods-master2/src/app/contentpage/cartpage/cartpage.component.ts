@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { RestaurantelistService } from "src/app/services/restaurantelist.service";
+import { Router } from "@angular/router";
 
 @Component({
   selector: "app-cartpage",
@@ -7,7 +8,7 @@ import { RestaurantelistService } from "src/app/services/restaurantelist.service
   styleUrls: ["./cartpage.component.css"],
 })
 export class CartpageComponent implements OnInit {
-  constructor(private RestaurantelistService: RestaurantelistService) {}
+  constructor(private RestaurantelistService: RestaurantelistService, private router: Router) {}
 
   ngOnInit() {this.findItensCart()}
 
@@ -20,5 +21,10 @@ export class CartpageComponent implements OnInit {
         this.foodList.push(resultado);
       }
     );
+  }
+
+  finishOrder(){
+    alert("Pedido Realizado!")
+    this.router.navigate(["finishorder"])
   }
 }

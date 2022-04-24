@@ -33,6 +33,7 @@ import {
 } from "angular-6-social-login-v2";
 import CheckLogged from "./checkLogged.canActivate";
 import { CartpageComponent } from './contentpage/cartpage/cartpage.component';
+import { OrderFinishedComponent } from './contentpage/order-finished/order-finished.component';
 
 
 const routes: Routes = [
@@ -69,6 +70,11 @@ const routes: Routes = [
     canActivate: [CheckLogged],
     component: CartpageComponent
   },
+  {
+    path: "finishorder",
+    canActivate: [CheckLogged],
+    component: OrderFinishedComponent
+  }
 ];
 
 export function getAuthServiceConfigs() {

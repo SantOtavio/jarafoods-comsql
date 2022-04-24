@@ -5,6 +5,7 @@ import { ListarestauranteComponent } from './listarestaurante/listarestaurante.c
 import { EditrestauranteComponent } from './editrestaurante/editrestaurante.component';
 import { RestpageComponent } from './restpage/restpage.component';
 import { CartpageComponent } from './cartpage/cartpage.component';
+import { OrderFinishedComponent } from './order-finished/order-finished.component';
 
 
 
@@ -13,6 +14,6 @@ import { CartpageComponent } from './cartpage/cartpage.component';
     CommonModule,
     FormsModule
   ],
-  declarations: [ListarestauranteComponent, EditrestauranteComponent, RestpageComponent, CartpageComponent]
+  declarations: [ListarestauranteComponent, EditrestauranteComponent, RestpageComponent, CartpageComponent, OrderFinishedComponent]
 })
 export class ContentpageModule {}

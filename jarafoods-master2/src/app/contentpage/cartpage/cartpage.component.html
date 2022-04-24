@@ -1,8 +1,15 @@
-<ul class="listacomidas">
-  <li class="item-list" *ngFor="let listas of foodList[0]">
-      <div class="foodName">
-        {{ listas.NOMECOMIDA }}
-      </div>
-      <div class="priceFoods">Preço: R${{ listas.PRECOCOMIDA }}</div>
-  </li>
-</ul>
+<div class="cartItens">
+  <ul class="listacomidas">
+    <li class="item-list" *ngFor="let listas of foodList[0]">
+        <div class="foodName">
+          {{ listas.NOMECOMIDA }}
+        </div>
+        <div class="priceFoods">Preço: R${{ listas.PRECOCOMIDA }}</div>
+    </li>
+  </ul>
+</div>
+<br/>
+<div class="finishOrder">
+  <button class="finishOrderButton" (click)="finishOrder()">Finalizar pedido</button>
+</div>
+

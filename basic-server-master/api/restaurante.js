@@ -41,7 +41,7 @@ inserirRota("/inserir_carrinho", (dados, resposta) => {
 
 inserirRota("/buscarCarrinho", (dados, resposta) => {
   console.log(dados);
-  database(`SELECT * FROM CARRINHO WHERE ${dados.email} = CARRINHO.EMAILUSER`)
+  database(`SELECT * FROM CARRINHO WHERE emailUser = "${dados.email}"`)
     .then((result) => {
       console.log(result);
       resposta(result);

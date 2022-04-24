@@ -55,7 +55,7 @@ database(`CREATE TABLE IF NOT EXISTS CARRINHO (
     ID_COMIDA INTEGER not null,
     RESTAURANTE_ID INTEGER NOT NULL,
     NOMECOMIDA varchar(100) NOT NULL,
-    PRECOCOMIDA double not null
+    PRECOCOMIDA double not null,
     foreign key(RESTAURANTE_ID) references RESTAURANTES(ID)
     on delete cascade on update cascade,
     foreign key(EMAILUSER) references USUARIOS(EMAIL)
