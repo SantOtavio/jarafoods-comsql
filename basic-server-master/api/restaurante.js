@@ -51,3 +51,17 @@ inserirRota("/buscarCarrinho", (dados, resposta) => {
         resposta({ message: "Usuario não foi inserido :(" });
     });
 });
+
+inserirRota("/limparCarrinho", (dados, resposta) => {
+  console.log(dados);
+  database(`DELETE FROM CARRINHO
+  WHERE emailUser = "${dados.email}"`)
+    .then((result) => {
+      console.log(result);
+      resposta(result);
+    })
+    .catch((erro) => {
+      console.log("ERRO AO INSERIR USUARIO"),
+        resposta({ message: "Usuario não foi inserido :(" });
+    });
+});

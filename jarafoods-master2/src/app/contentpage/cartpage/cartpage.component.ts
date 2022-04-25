@@ -8,23 +8,37 @@ import { Router } from "@angular/router";
   styleUrls: ["./cartpage.component.css"],
 })
 export class CartpageComponent implements OnInit {
-  constructor(private RestaurantelistService: RestaurantelistService, private router: Router) {}
+  constructor(
+    private RestaurantelistService: RestaurantelistService,
+    private router: Router
+  ) {}
 
-  ngOnInit() {this.findItensCart()}
+  ngOnInit() {
+    this.findItensCart();
+  }
 
   foodList = [];
 
   findItensCart() {
-    this.RestaurantelistService.buscarCarrinho(localStorage.getItem("USER")).then(
-      (resultado) => {
-        console.log(resultado);
-        this.foodList.push(resultado);
-      }
-    );
+    this.RestaurantelistService.buscarCarrinho(
+      localStorage.getItem("USER")
+    ).then((resultado) => {
+      console.log(resultado);
+      this.foodList.push(resultado);
+    });
   }
 
-  finishOrder(){
-    alert("Pedido Realizado!")
-    this.router.navigate(["finishorder"])
+  finishOrder() {
+    alert("Pedido Realizado!");
+    this.router.navigate(["finishorder"]);
+  }
+
+  clearOrder() {
+    this.RestaurantelistService.limparCarrinho(
+      localStorage.getItem("USER")
+    ).then((resultado) => {
+      console.log(resultado);
+    });
+    window.location.reload();
   }
 }

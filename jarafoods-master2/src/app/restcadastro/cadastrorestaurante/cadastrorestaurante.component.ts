@@ -27,6 +27,7 @@ export class CadastrorestauranteComponent implements OnInit {
       this.restimageurl,
       this.email
     );
+    this.router.navigate([""])
   }
 
   restimageurl;

@@ -104,6 +104,31 @@ cursor: pointer;
   max-height: 400px;
 }
 
+.sendToCart{
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sendToCartButton{
+  width: 130px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: red;
+  border: none;
+  color: white;
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+  margin-right: 30pxdd;
+}
+
+.sendToCartButton:hover{
+  transition: .4s;
+  background-color: rgb(173, 0, 0);
+}
+
 .item-list:hover{
   transition: .4s;
   box-shadow: 0.5px 0.5px 12px 0.5px;

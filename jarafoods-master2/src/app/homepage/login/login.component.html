@@ -1,23 +1,45 @@
-<div class="header-container">
-  <a   class="logo-header">
-    <img class="logo-header-img"  src="../../../../simple-logo-jarafoods.png" />
-  </a>
+<header>
+  <div class="header-container">
+    <a   class="logo-header">
+      <img class="logo-header-img"  src="../../../../simple-logo-jarafoods.png" />
+    </a>
 
-  <div class="text-list">
-    <button class="restaurant-text" (click)="redirectRestSignup()">
-      Cadastre seu restaurante
-    </button>
-    <button class="entregador-text" (click)="redirectEntregadorSignup()">
-      Seja nosso entregador
-    </button>
-    <button class="suport-text" (click)="redirectSuport()">
-      Suporte
-    </button>
+    <div class="text-list">
+      <button class="restaurant-text" (click)="redirectRestSignup()">
+        Cadastre seu restaurante
+      </button>
+      <button class="entregador-text" (click)="redirectEntregadorSignup()">
+        Seja nosso entregador
+      </button>
+      <button class="suport-text" (click)="redirectSuport()">
+        Suporte
+      </button>
+    </div>
+
+    <nav class="navigation-header">
+      <button class="signup-button" (click)="redirectSignup()">Registre-se</button>
+
+      <button class="signin-button" (click)="redirectSignin()">Entrar</button>
+    </nav>
   </div>
-
-  <nav class="navigation-header">
-    <button class="signup-button" (click)="redirectSignup()">Registre-se</button>
-
-    <button class="signin-button" (click)="redirectSignin()">Entrar</button>
-  </nav>
+</header>
+<body>
+  <br/>
+<section class="section-1">
+  <h1 class="text-chamativo">Estamos prontos para batalhar contra sua fome!</h1>
+  <button class="botao-login-section1" (click)="redirectSignin()">Faça login</button>
+</section>
+<br/>
+<br/>
+<br/>
+<br/>
+<section class="section-2">
+<div class="hamburguer-quadrado">
+<img class="burguer-img" src="../../../../pngwing.com.png">
 </div>
+<div class="pizza-quadrado">
+  <img class="pizza-img" src="../../../../7-70471_fatia-pizza-png-pizza-massa-fina-png.png">
+</div>
+</section>
+</body>
+

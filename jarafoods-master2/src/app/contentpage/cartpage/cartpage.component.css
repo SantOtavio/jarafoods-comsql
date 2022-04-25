@@ -1,0 +1,53 @@
+.item-list{
+  background-color: rgb(248, 22, 22);
+  cursor: pointer;
+  list-style: none;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  row-gap: 5px;
+  min-width: 300px;
+  max-width: 300px;
+  min-height: 70px;
+  color: white;
+  font-weight: 700;
+}
+
+.listacomidas{
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+row-gap: 20px;
+padding: 0px 0px 0px 0px;
+}
+
+#container{
+width: 100vw;
+height: 100vh;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+column-gap: 30px;
+}
+
+.finishOrderButton{
+  width: 140px;
+  height: 60px;
+  border-radius: 10px;
+  background-color: rgb(128, 8, 0);
+  border: none;
+  color: white;
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.finishOrder{
+display: flex;
+column-gap: 30px;
+}

@@ -76,4 +76,21 @@ export class RestaurantelistService {
         .catch(rejeitado);
     });
   }
+
+  limparCarrinho(email) {
+    return new Promise((resolvido, rejeitado) => {
+      fetch("/api/limparCarrinho", {
+        method: "POST",
+        body: JSON.stringify({
+          email
+        }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      })
+        .then((resultado) => resultado.json())
+        .then(resolvido)
+        .catch(rejeitado);
+    });
+  }
 }
